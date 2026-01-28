@@ -64,9 +64,11 @@ The following resources are created using Terraform:
 - IAM permissions to create AWS resources
 
 Step 1: Initialize Terraform
+
 $ terraform init
 
 Step 2: Deploy the infrastructure
+
 $ terraform apply
 
 Type 'yes' when prompted.
@@ -83,9 +85,11 @@ Terraform will create:
 
 Step 1: Create the Lambda file
 Create a file named:
+
 lambda_function.py
 
 Step 2: Zip the file
+
 zip lambda.zip lambda_function.py
 
 Step 3: Deploy
