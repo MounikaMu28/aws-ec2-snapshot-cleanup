@@ -1,7 +1,7 @@
 README - EC2 Snapshot Cleanup Using AWS Lambda
 
 
-1. Overview
+**1. Overview**
 
 
 This project automates the cleanup of EC2 snapshots that are older than one year.
@@ -11,7 +11,7 @@ The Lambda function runs on a schedule and deletes old snapshots automatically,
 helping reduce storage cost and manual maintenance.
 
 
-2. Chosen IaC Tool – Terraform
+**2. Chosen IaC Tool – Terraform**
 
 
 Terraform is used to define and deploy all AWS resources because:
@@ -29,7 +29,7 @@ Terraform is used to create:
 - EventBridge (CloudWatch) schedule
 
 
-3. Infrastructure Created
+**3. Infrastructure Created**
 
 
 The following resources are created using Terraform:
@@ -54,22 +54,20 @@ The following resources are created using Terraform:
    - Triggers Lambda once per day automatically
 
 
-4. How to Deploy the Infrastructure
+**4. Steps to Deploy the Infrastructure**
 
 
-Prerequisites:
+**Prerequisites:**
 - AWS account
 - AWS CLI installed and configured
 - Terraform installed
 - IAM permissions to create AWS resources
 
 Step 1: Initialize Terraform
-----------------------------
-terraform init
+$ terraform init
 
 Step 2: Deploy the infrastructure
----------------------------------
-terraform apply
+$ terraform apply
 
 Type 'yes' when prompted.
 
@@ -81,7 +79,7 @@ Terraform will create:
 - EventBridge schedule
 
 
-5. Deploying the Lambda Function
+**5. Deploying the Lambda Function**
 
 
 Step 1: Create the Lambda file
@@ -100,7 +98,7 @@ Terraform automatically uploads the Lambda code during:
 terraform apply
 
 
-6. Running Lambda Inside a VPC
+**6. Running Lambda Inside a VPC**
 
 
 The Lambda function is configured with:
@@ -119,7 +117,7 @@ This ensures:
 - Access to AWS services
 
 
-7. Assumptions
+****7.** Assumptions****
 
 
 - AWS Region: us-east-1
@@ -130,7 +128,7 @@ This ensures:
 - Internet access is available via AWS networking
 
 
-8. Monitoring and Logging
+**8. Monitoring and Logging**
 
 
 CloudWatch Logs:
