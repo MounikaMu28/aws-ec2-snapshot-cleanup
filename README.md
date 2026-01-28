@@ -1,8 +1,8 @@
 README - EC2 Snapshot Cleanup Using AWS Lambda
 
-=================================================
+
 1. Overview
-=================================================
+
 
 This project automates the cleanup of EC2 snapshots that are older than one year.
 The solution uses AWS Lambda and is fully managed using Infrastructure as Code (Terraform).
@@ -10,9 +10,9 @@ The solution uses AWS Lambda and is fully managed using Infrastructure as Code (
 The Lambda function runs on a schedule and deletes old snapshots automatically,
 helping reduce storage cost and manual maintenance.
 
-=================================================
+
 2. Chosen IaC Tool – Terraform
-=================================================
+
 
 Terraform is used to define and deploy all AWS resources because:
 
@@ -28,9 +28,9 @@ Terraform is used to create:
 - Lambda function
 - EventBridge (CloudWatch) schedule
 
-=================================================
+
 3. Infrastructure Created
-=================================================
+
 
 The following resources are created using Terraform:
 
@@ -53,9 +53,9 @@ The following resources are created using Terraform:
 5. EventBridge Rule
    - Triggers Lambda once per day automatically
 
-=================================================
+
 4. How to Deploy the Infrastructure
-=================================================
+
 
 Prerequisites:
 - AWS account
@@ -80,9 +80,9 @@ Terraform will create:
 - Lambda function
 - EventBridge schedule
 
-=================================================
+
 5. Deploying the Lambda Function
-=================================================
+
 
 Step 1: Create the Lambda file
 ------------------------------
@@ -99,9 +99,9 @@ Step 3: Deploy
 Terraform automatically uploads the Lambda code during:
 terraform apply
 
-=================================================
+
 6. Running Lambda Inside a VPC
-=================================================
+
 
 The Lambda function is configured with:
 
@@ -118,9 +118,9 @@ This ensures:
 - No public exposure
 - Access to AWS services
 
-=================================================
+
 7. Assumptions
-=================================================
+
 
 - AWS Region: us-east-1
 - Only self-owned snapshots are deleted
@@ -129,9 +129,9 @@ This ensures:
 - Terraform is used for deployment
 - Internet access is available via AWS networking
 
-=================================================
+
 8. Monitoring and Logging
-=================================================
+
 
 CloudWatch Logs:
 - View Lambda execution logs
