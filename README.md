@@ -81,19 +81,14 @@ Terraform will create:
 
 **5. Deploying the Lambda Function**
 
-
 Step 1: Create the Lambda file
-------------------------------
 Create a file named:
-
 lambda_function.py
 
 Step 2: Zip the file
---------------------
 zip lambda.zip lambda_function.py
 
 Step 3: Deploy
---------------
 Terraform automatically uploads the Lambda code during:
 terraform apply
 
